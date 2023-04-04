@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my form</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <h1>Video Uploader</h1>
+<form enctype="multipart/form-data" method="POST" action="">
+    <input type="text" placeholder="enter the name of file">
+    <br>
+    <span>{% csrf_token %}
+        {{ form.as_p }}</span>
+    <input type="submit" value="Upload"/>
+</form>
+<br>
+
+<video width='600' controls>
+    <source src='{{ file_url }}' type='video/mp4'>
+    File video
+
+        </td>
+        <td>
+             <textarea rows="30" cols="100  " placeholder="enter the text" ></textarea>
+        </span>
+            <br>
+        <button type="submit" class="save btn btn-default">Save</button>
+        </td>
+    </tr>
+</table>
+
+<br>
+</body>
+</html>
